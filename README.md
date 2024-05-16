@@ -6,8 +6,10 @@
 I prepared this demo to show how we can collect metrics from SRLINUX routers and generate charts at Grafana, after setting up the pipeline that leverages OpenTelemetry and Prometheus.
 
 I developed a simple script metric_manager.py that grabs packets_out counters from interfaces (ethernet-1/1 and ethernet-1/2) every 5 secs using **gNMI**. 
-The path where the metrics are stored can be discovered by the **YANG** model documentation of the SRLinux <br> 
-https://yang.srlinux.dev <br> 
+The path where the metrics are stored can be discovered with the **YANG** model documentation of the SRLinux  <br> 
+
+https://yang.srlinux.dev  <br> 
+
 The script then pushes that metrics towards the **OpenTelemetry Collector**.
 
 The metrics are stored in Prometheus after which are be polled by Grafana.
@@ -49,7 +51,7 @@ At the end you should see <br>
 **Trigger packets from host10 to host20 <br>**
 > docker exec -ti  clab-muzolab-host10 ping clab-muzolab-host20 <br>
 
-Finally, turn on the metric_manager.py <br>
+**Finally, turn on the metric_manager.py <br>**
 > python3 metric_manager.py  <br>
 
 
