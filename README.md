@@ -30,12 +30,12 @@ You can find the installation steps for Containerlab at <br/>
 https://containerlab.dev/install/
 
 ## Demo Steps
-**Install all required modules <br>**
-> pip install -r requirements.txt <br>
-  
 **Clone the repo and navigate to the folder <br>**
 > git clone https://github.com/muzafferkahraman/opentelemetry-with-srlinux <br>
 > cd opentelemetry-with-srlinux <br>
+
+**Install all required modules <br>**
+> pip install -r requirements.txt <br>
 
 **Deploy the leafs,spines and the hosts that generate the packets <br>**
 > clab dep -t  /topology-files/muzolab.yml --reconfigure <br>
