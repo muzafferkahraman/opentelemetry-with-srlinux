@@ -54,14 +54,11 @@ At the end you should see <br>
 **Finally, turn on the metric_manager.py <br>**
 > python3 metric_manager.py  <br>
 
-
 ### Accessing to Grafana <br>
 
 Grafana: http://localhost:3000 <br>
 username and passwords are set as muzo/muzo <br>
 data source and charts are pre-configured <br>
-
-
 
 #### Destroying the lab <br>
 > clab des -t topology-files/muzolab.yml --cleanup <br>
