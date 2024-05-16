@@ -28,26 +28,25 @@ You can find the installation steps for Containerlab at <br/>
 https://containerlab.dev/install/
 
 ## Demo Steps
-<br>
-Install all required modules <br>
+**Install all required modules <br>**
 > pip install -r requirements.txt <br>
   
-Clone the repo and navigate to the folder <br>
+**Clone the repo and navigate to the folder <br>**
 > git clone https://github.com/muzafferkahraman/opentelemetry-with-srlinux <br>
 > cd opentelemetry-with-srlinux <br>
 
-Deploy the leafs,spines and the hosts that generate the packets <br>
+**Deploy the leafs,spines and the hosts that generate the packets <br>**
 > clab dep -t  /topology-files/muzolab.yml --reconfigure <br>
 
 At the end you should see <br>
 
 ![](pics/clab_result.png)
 
-Deploy Grafana,Prometheus and the OpenTelemetry Collector <br>
+**Deploy Grafana,Prometheus and the OpenTelemetry Collector <br>**
 > docker compose -f /topology-files/docker-compose.yml up <br>
 
 
-Trigger packets from host10 to host20 <br>
+**Trigger packets from host10 to host20 <br>**
 > docker exec -ti  clab-muzolab-host10 ping clab-muzolab-host20 <br>
 
 Finally, turn on the metric_manager.py <br>
