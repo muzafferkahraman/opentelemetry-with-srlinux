@@ -38,14 +38,14 @@ https://containerlab.dev/install/
 > pip install -r requirements.txt <br>
 
 **Deploy the leafs,spines and the hosts that generate the packets <br>**
-> clab dep -t  /topology-files/muzolab.yml --reconfigure <br>
+> clab dep -t  topology-files/muzolab.yml --reconfigure <br>
 
 At the end you should see <br>
 
 ![](pics/clab_result.png)
 
 **Deploy Grafana,Prometheus and the OpenTelemetry Collector <br>**
-> docker compose -f /topology-files/docker-compose.yml up <br>
+> docker compose -f topology-files/docker-compose.yml up <br>
 
 
 **Trigger packets from host10 to host20 <br>**
