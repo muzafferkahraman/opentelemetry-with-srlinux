@@ -58,6 +58,9 @@ At the end you should see <br>
 ### Accessing to Grafana <br>
 
 Grafana: http://localhost:3000 <br>
+username and passwords are set as muzo/muzo <br>
+data source and charts are pre-configured <br>
+
 
 
 #### Destroying the lab <br>
