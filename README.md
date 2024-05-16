@@ -2,7 +2,6 @@
 
 ![](pics/demo_topology.png)
 
-<br/>
 
 I prepared this demo to show how we can collect metrics from SRLINUX routers and generate charts at Grafana, after setting up the pipeline that leverages OpenTelemetry and Prometheus.
 
