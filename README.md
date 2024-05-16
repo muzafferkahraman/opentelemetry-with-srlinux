@@ -4,28 +4,33 @@
 
 <br/>
 
-I prepared this repo to demo to show how we can collect metrics from SRLINUX routers and generate charts at Grafana, after setting up the pipeline that leverages OpenTelemetry and Prometheus.
+I prepared this demo to show how we can collect metrics from SRLINUX routers and generate charts at Grafana, after setting up the pipeline that leverages OpenTelemetry and Prometheus.
 
-<br/>
-
-I developed a simple script metric_manager.py that grabs packets_out counters from interfaces (ethernet-1/1 and ethernet-1/2) every 5 secs using gNMI. The script then pushes that metrics towards the OpenTelemetry Collector.
+I developed a simple script metric_manager.py that grabs packets_out counters from interfaces (ethernet-1/1 and ethernet-1/2) every 5 secs using gNMI. The path where the metrics are stored can be discovered by the YANG model documentation of the SRLinux (https://yang.srlinux.dev/). The script then pushes that metrics towards the OpenTelemetry Collector.
 
 The metrics are stored in Prometheus after which will be polled by Grafana.
 
-The Dashboard at Grafana is as:
+Grafana Dashboard is as:
 
 <br/>
 
-![](grafana_dashboard.png)
+![](pics/grafana_dashboard.png)
 
 
-
-
-
+<br/>
 
 **Here are the steps for the demo**
 
-### Deploy the test topology
+### Important Pre-requisites
+Docker, Docker Compose and Containerlab must have been deployed.
+
+Containerlab is a utility that provides a CLI for orchestrating and managing container-based networking labs. With presenting a topology file in yaml, one can easily build up the lab. Containerlab spins up routers and hosts as docker containers and creates the wiring  that interconnect them together.
+
+You can find the installation steps for Containerlab at: 
+https://containerlab.dev/install/
+
+
+
 > git clone https://github.com/muzafferkahraman/network_automation_demo <br>
 > cd network_automation_demo <br>
 > clab deploy -t lab_deploy.yml --reconfigure <br>
